@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script type="text/javascript" src="exam.js" async></script>
+
+    <!--You need to make a grid, by choosing the input width and height (clicking on a button will create the grid). (1 points)	
+	-->
+
+    <p>Table generator:</p>
+    Width:
+    <input type="text" id="Ancho"></input> Height:
+    <input type="text" id="Alto"></input>
+    <input type="button" value="Create" onclick="creaTabla()"></input>
+    <br>
+    <br>
+    <p>Color Select:</p>
+    <table>
+        <tr>
+            <td style="background-color:red; width:50px; height:50px; border:solid black 1px;" onclick="pillaColor(this)"></td>
+            <td style="background-color:green; width:50px; height:50px; border:solid black 1px;" onclick="pillaColor(this)"></td>
+            <td style="background-color:blue; width:50px; height:50px; border:solid black 1px;" onclick="pillaColor(this)"></td>
+            <td style="background-color:orange; width:50px; height:50px; border:solid black 1px;" onclick="pillaColor(this)"></td>
+            <td style="background-color:yellow; width:50px; height:50px; border:solid black 1px;" onclick="pillaColor(this)"></td>
+            <td style="background-color:purple; width:50px; height:50px; border:solid black 1px;" onclick="pillaColor(this)"></td>
+            <td style="background-color:grey; width:50px; height:50px; border:solid black 1px;" onclick="pillaColor(this)"></td>
+        </tr>
+    </table>
+
+    <br />
+
+    <p>Mails:</p>
+    <input type="text" id="Correo" value="one@yahoo.com, second@woo.com, gars@gmail.com, another@bla.com"></input>
+    <input type="button" value="Enviar" onclick="Correos()"></input>
+    <br />
+    <br />
+    <div id="colorSelect" style="background-color:grey; width:100px; height:30px;">red</div>
+    <div id="colorPincel" style="background-color:yellow; width:100px; height:30px;">Activo</div>
+    <br />
+    
+</body>
+</html>

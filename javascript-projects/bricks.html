@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>BRICK SIZABLE</title>
+    <script src="vendor/jquery.min"></script>
+    <script src="vendor/jquery-ui.min.js"></script>
+    <style>
+        div {
+            background-color: #bca;
+            width: 10px;
+            height: 30px;
+            border: 1px solid yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="block" class="block">
+    </div>
+    <div id="block" class="block">
+    </div>
+    <div id="block" class="block">
+    </div>
+    <div id="block" class="block">
+    </div>
+    <div id="block" class="block">
+    </div>
+    <div id="block" class="block">
+    </div>
+    <div id="block" class="block">
+    </div>
+    <script>
+        $("div").mouseover(function(event) {
+            tar = $(event.target);
+            tar.animate({
+                width: "70%",
+                borderWidth: "10px"
+            }, 1500);
+        });
+        $("div").mouseout(function(event) {
+            tar = $(event.target);
+            tar.animate({
+                width: "10px",
+                borderWidth: "1px"
+            }, 1500);
+        });
+    </script>
+</body>
+
+</html>

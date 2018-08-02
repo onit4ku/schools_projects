@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>jQuery.getJSON demo</title>
+<style>
+img {
+height: 200px;
+float: left;
+}
+</style>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+</head>
+<body>
+<div id="images"></div>
+<table id="tab" border 1></table>
+<script>
+(function() {
+		var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+		$.getJSON( flickerAPI, {
+		tagmode: "tree",
+		format: "json"
+	})
+	.done(function( data ) {
+		console.log(data);
+		$.each( data.items, function( i, item ) {
+		
+			$( "<tr>" ).html("<td>"+item.author +"</td>"+"<td>"+item['author_id']+"</td>").appendTo( "#tab" );
+			if ( i === 30 ) {
+				return false;
+			}
+		});
+	});
+})();
+</script>
+</body>
+</html>

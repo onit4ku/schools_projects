@@ -1,0 +1,21 @@
+<html>
+<head></head>
+<body>
+<script type="text/javascript">
+  function pintar(objeto,col)
+  {
+    objeto.bgColor=col;
+  }
+</script>
+
+<p>pinta el interior del td</p>
+
+<table border="1">
+<tr>
+<td style="width:100px; height:100px;" onMouseOver="pintar(this,'#ff0000')" onMouseOut="pintar(this,'#ffffff')">rojo</td>
+<td style="width:100px; height:100px;" onMouseOver="pintar(this,'#00ff00')" onMouseOut="pintar(this,'#ffffff')">verde</td>
+<td style="width:100px; height:100px;" onMouseOver="pintar(this,'#0000ff')" onMouseOut="pintar(this,'#ffffff')">azul</td>
+</tr>
+</table>
+</body>
+</html>

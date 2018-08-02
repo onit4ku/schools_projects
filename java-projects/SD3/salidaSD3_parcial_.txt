@@ -1,0 +1,145 @@
+*********************************
+Procesamiento fichero personas.dat 
+*********************************
+-----------------------
+nombre: ALBERTO
+apellidos: PÉREZ BLANCO
+nif: 12345678Q
+fecha: 02-ene-1976
+lugar: GALICIA
+-----------------------
+NifIncorrecto: 12345678Q --> último carácter no es la letra correcta
+-----------------------
+nombre: JUAN
+apellidos: GONZÁLEZ CASTRO
+nif: 63498642N
+fecha: 05-oct-1956
+lugar: EXTREMADURA
+-----------------------
+nombre: MARÍA
+apellidos: MARTÍN GARCÍA
+nif: 1455446Y
+fecha: 21-mar-1982
+lugar: CASTILLA Y LEÓN
+-----------------------
+nombre: ANA
+apellidos: LÓPEZ GALDÓS
+nif: 8875645Z
+fecha: 16-abr-1983
+lugar: MADRID
+-----------------------
+nombre: LORENA
+apellidos: TORRES SÁNCHEZ
+nif: F5767434X
+fecha: 03-sep-1992
+lugar: CATALUÑA
+-----------------------
+NifIncorrecto: F5767434X --> primer carácter no es dígito, ni X,Y,Z
+-----------------------
+nombre: MANUEL
+apellidos: IGLESIAS VÁZQUEZ
+nif: 53643634K
+fecha: 31-dic-1899
+lugar: MELILLA
+-----------------------
+FechaIncorrecta: 31-dic-1899 --> es anterior al siglo XX
+-----------------------
+nombre: LUISA
+apellidos: HIDALGO GÓMEZ
+nif: 23663223H
+fecha: 28-feb-1962
+lugar: ANDALUCÍA
+-----------------------
+nombre: JAIME
+apellidos: PRAT TERUEL
+nif: 76593422I
+fecha: 24-jun-1968
+lugar: MURCIA
+-----------------------
+NifIncorrecto: 76593422I --> último carácter no es la letra correcta
+-----------------------
+nombre: CARMEN
+apellidos: ORTIZ MUÑOZ
+nif: 52425742K
+fecha: 10-oct-1944
+lugar: CEUTA
+-----------------------
+NifIncorrecto: 52425742K --> último carácter no es la letra correcta
+-----------------------
+nombre: ABELARDO
+apellidos: MADRID PUERTO
+nif: 12635444N
+fecha: 21-abr-1957
+lugar: PAÍS VASCO
+-----------------------
+NifIncorrecto: 12635444N --> último carácter no es la letra correcta
+-----------------------
+nombre: CELIA
+apellidos: DÍAZ SORIANO
+nif: 87566123Y
+fecha: 02-ago-2016
+lugar: ARAGÓN
+-----------------------
+FechaIncorrecta: 02-ago-2016 --> está en el futuro
+-----------------------
+nombre: ROSENDO
+apellidos: BELTRÁN ROS
+nif: 1676523F
+fecha: 02-feb-2014
+lugar: MENORCA
+-----------------------
+LugarDesconocido: MENORCA --> no es ninguna comunidad autónoma
+-----------------------
+nombre: DANIELA
+apellidos: PORTILLO GARCÍA
+nif: 32857763D
+fecha: 01-ene-2000
+lugar: IBIZA
+-----------------------
+LugarDesconocido: IBIZA --> no es ninguna comunidad autónoma
+-----------------------
+nombre: JORGE
+apellidos: MARTÍNEZ CAMPOS
+nif: 13565634G
+fecha: 05-may-2015
+lugar: CANARIAS
+-----------------------
+FechaIncorrecta: 05-may-2015 --> está en el futuro
+-----------------------
+nombre: SUSAN
+apellidos: LINCOLN
+nif: Y4565534P
+fecha: 06-ago-1986
+lugar: ASTURIAS
+-----------------------
+NifIncorrecto: Y4565534P --> último carácter no es la letra correcta
+-----------------------
+nombre: ISABELLA
+apellidos: MARTINI
+nif: Z97891234H
+fecha: 22-abr-1963
+lugar: CANTABRIA
+-----------------------
+nombre: JEAN
+apellidos: PROUST
+nif: G15767234G
+fecha: 28-sep-1868
+lugar: NAVARRA
+-----------------------
+FechaIncorrecta: 28-sep-1868 --> es anterior al siglo XX
+-----------------------
+nombre: IVÁN
+apellidos: DENISOVITCH
+nif: X12665434R
+fecha: 10-oct-1935
+lugar: ARAGÓN
+-----------------------
+nombre: JUAN JOSÉ
+apellidos: LÓPEZ SÁNCHEZ
+nif: 1267634RL
+fecha: 07-jul-1972
+lugar: CASTILLA LA MANCHA
+-----------------------
+NifIncorrecto: 1267634RL --> algún carácter que debe ser dígito, no lo es
+-----------------------
+...

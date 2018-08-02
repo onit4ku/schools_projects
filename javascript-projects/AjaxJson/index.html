@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>jQuery.getJSON demo</title>
+<style>
+img {
+height: 200px;
+float: left;
+}
+</style>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+</head>
+<body>
+<div>
+	<table id="images" border="2px">
+		<tr>
+			<td>AUTHOR</td>
+			<td>AUTHOR ID</td>
+			<td>DATE TAKEN</td>
+			<td>IMAGE</td>
+		</tr>
+	</table>
+</div>
+<script>
+
+var jsonobject;
+
+(function() {
+var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+$.getJSON( flickerAPI, {
+tagmode: "any",
+format: "json"
+})
+.done(function( data ) {
+console.log(data); 
+
+jsonobject = data;
+
+$.each( data.items, function( i, item ) {
+
+$("<tr>").attr("id",i).appendTo("#images");
+$( "<td>" ).html(item.author).appendTo( "#"+i );
+$( "<td>" ).html(item.author_id).appendTo( "#"+i );
+$( "<td>" ).html(item.date_taken).appendTo( "#"+i );
+$( "<td>" ).html("<img src='"+ item.media.m +"'>").appendTo( "#"+i ).click(function()
+{
+	window.open(item.media.m);
+});
+$("tr:odd").css("background-color","grey");
+if ( i === 10 )
+{
+	$.ajax(
+	{
+		type: "POST",
+		url: "servidor.php",
+		dataType: 'json',
+		data : {
+			json: JSON.stringify(data)
+			}
+	}
+	).done(console.log("guardado"));
+	return false;
+}
+});
+
+});
+})();
+</script>
+</body>
+</html>

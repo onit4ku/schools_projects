@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+
+<script>
+function showHint(str)
+{
+var xmlhttp;
+if (str.length==0)
+  { 
+  document.getElementById("txtHint").innerHTML="";
+  return;
+  }
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+	$("#txtHint").css("display", "none"); //fadeOut();
+    document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+	$("#txtHint").fadeIn();
+	
+    }
+  }
+xmlhttp.open("POST","gethint.php?q="+str,true);
+xmlhttp.send();
+}
+</script>
+</head>
+<body>
+
+<h3>Start typing a name in the input field below:</h3>
+<form action=""> 
+First name: <input type="text" id="txt1" onkeyup="showHint(this.value)" />
+</form>
+
+<p>Suggestions: <span id="txtHint"></span></p> 
+<div style="background-color:red; width:200px; height:300px"></div>
+</body>
+</html>

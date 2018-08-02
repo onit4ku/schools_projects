@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<title>To Do</title>
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	</head>
+	<body>
+		<input id="todo" type="text" />
+		<button id="guardar">Guardar</button>
+		<br>
+		<button id="lista">Mostrar lista</button>
+		<div id="mostrar">
+			
+		</div>
+		<script>
+			var valor;
+			var valores = [];			
+
+			$("#guardar").click(function()
+				{
+					valor = $("#todo").val();
+					valores.push(valor);
+
+					$.ajax ({
+						  type:"POST",
+						  url:"listatodo.php",
+						  dataType:'json',
+						  data : {
+							   json : JSON.stringify(valores)
+							}
+						}).done(console.log(valores));
+				}	
+			);
+
+			$("#lista").click(function()
+				{
+					$.getJSON(
+						"todo2.json",
+						function(data)
+						{
+console.log(data);
+							$.each(data, function(id, val)
+							{
+								$("#mostrar").html($("#mostrar").html() + "<span>" + id + ": " + val + "</span><br>");
+							}
+							);
+						}
+					);
+				}
+			);
+		</script>
+	</body>
+</html>

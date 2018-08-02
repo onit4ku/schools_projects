@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FORMULARIO COPIABLE</title>
+    <script src="vendor/jquery-3.2.1.min.js"></script>
+    <script>
+        var nIdForm = 0
+        var nIdCopy = 2
+
+        function duplicar(oBoton) {
+            nIdForm = $(oBoton).attr("id").replace("btnCopy", "");
+            var oOldForm = $("#formulario" + nIdForm)
+            var oNewForm = oOldForm.clone(true);
+            setIDs(oNewForm);
+            $("body").append(oNewForm);
+            return false;
+        }
+
+        function setIDs(oObject) {
+            if (oObject.attr("id") != undefined) {
+                oObject.attr("id", oObject.attr("id").replace(nIdForm, nIdCopy));
+            }
+            var oChildren = oObject.find("*");
+            $.each(oChildren, function(index) {
+                if ($(this).attr("id") != undefined) {
+                    $(this).attr("id", $(this).attr("id").replace(nIdForm, nIdCopy));
+                }
+            });
+            nIdCopy = nIdCopy + 1;
+        }
+    </script>
+</head>
+
+<body>
+    <div align="center" class="principal" style="background-color: #E5E5E5;" id="formulario1">
+        <form id="form1">
+            First name:
+            <input type="text" name="firstname" id="firstname1" />
+            <br> Last name:
+            <input type="text" name="lastname" id="lastname1" />
+            <br> Password:
+            <input type="password" name="pwd" id="pwd1" />
+            <br>
+            <input type="radio" name="sex" value="male" id="sex1" />Male
+            <br>
+            <input type="radio" name="sex" value="female" id="female1" />Female
+            <br>
+            <input type="checkbox" name="vehicle" value="Bike" id="bike1" />I have a bike
+            <br>
+            <input type="checkbox" name="vehicle" value="Car" id="car1" />I have a car
+            <br>
+            <input type="submit" value="Submit" id="btnSubmit1" />
+            <input type="submit" value="Copy" id="btnCopy1" onclick="return duplicar(this)" />
+        </form>
+    </div>
+</body>
+
+</html>

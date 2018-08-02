@@ -1,0 +1,5 @@
+	
+	Luis
+
+    $var1 = $_POST['variable1'];
+    $var2 = $_POST['variable2'];

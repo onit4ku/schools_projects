@@ -1,0 +1,66 @@
+body 
+{
+   color:#FFFFFF;
+   font-family: Verdana;
+	background: url(php-wallpaper.jpg) center center fixed; 
+	position: 100%;
+}
+
+#nav 
+{
+    margin: 50px;
+    z-index: 5;
+    display: block;
+}
+
+#nav li 
+{ 
+	float: left; 
+	list-style:none;
+	background-color:#000;
+	color:#ff7f00;	
+}
+
+#nav li:hover 
+{ 
+	position: relative;
+}
+
+
+#nav li a 
+{
+  	text-decoration: none;
+  	padding: 12px;
+   	display: block;
+	color:#ff7f00;
+}
+                  
+#nav li ul 
+{ 
+    margin-top: -2px;
+    display: none;   
+}
+#nav li:hover ul 
+{
+	display:block;
+	position:absolute;
+}
+
+#nav li ul {
+    padding: 10px 5px;
+
+}
+
+#nav li ul li a {
+	background-color:#395a2f;
+	color:#ff7f00;
+    width: 150px;
+    font-size: 0.95em;
+    font-weight: normal;
+}
+#nav li ul li a:hover { 
+	text-decoration: none;
+	background-color:#ff7f00;
+    color: #FFFFFF;
+
+}

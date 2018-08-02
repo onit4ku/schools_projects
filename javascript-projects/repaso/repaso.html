@@ -1,0 +1,67 @@
+<HTML>
+<BODY>
+
+<button onclick="saludo()">saludo</button>
+
+<p>colores onmouseover y onmouseout</p>
+
+<div style="width:50px; height: 50px; background-color:blue;" 	onmouseover="changecolor('blue')" onmouseout="changecolor('white')"></div>
+<div style="width:50px; height: 50px; background-color:red;"	onmouseover="changecolor('red')"onmouseout="changecolor('white')"></div>
+<div style="width:50px; height: 50px; background-color:yellow;"onmouseover="changecolor('yellow')"onmouseout="changecolor('white')"></div>
+
+<br>
+
+<form name=monedas>
+Pesetas: <input type=text name=pesetas>
+<input type="button" value="Convertir a euros" onclick="if(!isNaN(this.form.pesetas.value)) this.form.c_euros.value=this.form.pesetas.value/166.386; else alert('No es un numero');">
+Euros: <input type=text name=c_euros readonly>
+<br>
+Euros: <input type=text name=euros>
+<input type="button" value="Convertir a pesetas" onclick="if(!isNaN(this.form.euros.value)) this.form.c_pesetas.value=this.form.euros.value*166.386; else alert('No es un numero');">
+Pesetas: <input type=text name=c_pesetas readonly>
+<input type="reset"> 
+</form>
+
+<br>
+
+<INPUT TYPE=BUTTON ID="Boton" STYLE="position:relative" 
+         VALUE="Boton que desaparece"
+         onmouseover="Desaparece(this)">
+
+<BR><BR>
+
+  <INPUT TYPE=TEXT ID="Caja" STYLE="position:relative" 
+         VALUE="Caja que desaparece"
+         onmouseover="Desaparece(this)">
+<BR>
+
+  <P ID="Texto"STYLE="position:relative"
+         onmouseover="Desaparece(this)">
+         Texto que desaparece </P>
+<BR>
+ 
+  <P onclick="Aparece()"> Pulsa aqui para que todo aparezca </P>
+  
+
+<SCRIPT>
+function saludo() {
+alert("hola");	
+}
+
+function changecolor(code){
+	document.bgColor=code; 
+}
+	
+function Desaparece(Elemento){
+	Elemento.style.visibility="hidden" 
+}
+    
+function Aparece(){
+	Boton.style.visibility="visible" 
+   Caja.style.visibility="visible" 
+   Texto.style.visibility="visible" 
+}
+    
+</SCRIPT>
+</BODY>
+</HTML>
